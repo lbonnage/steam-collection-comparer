@@ -1,2 +1,4 @@
 # Do not push the virtual environment
 /venv
+
+/__pycache__
