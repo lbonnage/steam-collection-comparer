@@ -62,7 +62,7 @@ function App() {
             </InputGroup.Append>
           </InputGroup>
           <Form>
-            <Button variant="primary">
+            <Button variant="primary" onClick={e => Compare()}>
               Compare
             </Button>
           </Form>
