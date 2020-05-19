@@ -24,7 +24,7 @@ function App() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ "collections": collections })
         };
-        fetch('http://127.0.0.1:5000/compare', requestOptions)
+        fetch('/compare', requestOptions)
             .then(response => response.json())
             .then(data => setResults(data))
             .then(data => setCollectionIds(collections))
