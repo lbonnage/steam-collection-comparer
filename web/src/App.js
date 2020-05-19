@@ -32,7 +32,7 @@ function App() {
     }
 
     return (
-        <div className="App">
+        <div>
         {displayResults
                 ? <Comparison collectionIds={collectionIds} results={results}/>
                 : <CompareMenu compare={compare.bind(this)}/>
