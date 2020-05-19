@@ -24,7 +24,7 @@ function App() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ "collections": collections })
         };
-        fetch('/compare', requestOptions)
+        fetch('http://127.0.0.1:5000/compare', requestOptions)
             .then(response => response.json())
             .then(data => setResults(data))
             .then(data => setCollectionIds(collections))
@@ -32,7 +32,7 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="App">
         {displayResults
                 ? <Comparison collectionIds={collectionIds} results={results}/>
                 : <CompareMenu compare={compare.bind(this)}/>
