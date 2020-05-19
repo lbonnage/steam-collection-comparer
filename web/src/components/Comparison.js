@@ -1,5 +1,6 @@
 import React from 'react';
-import { useTable, useSortBy } from 'react-table'
+import { useTable, useSortBy } from 'react-table';
+import './Comparison.css';
 
 
 function Table({ columns, data }) {
@@ -24,14 +25,14 @@ function Table({ columns, data }) {
 
     return (
         <>
-            <table {...getTableProps()}>
+            <table {...getTableProps()} className="Comparison" >
                 <thead>
                 {headerGroups.map(headerGroup => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
                         {headerGroup.headers.map(column => (
                             // Add the sorting props to control sorting. For this example
                             // we can add them into the header props
-                            <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                            <th {...column.getHeaderProps(column.getSortByToggleProps())} className="Comparison-header">
                                 {column.render('Header')}
                                 {/* Add a sort direction indicator */}
                                 <span>
@@ -51,10 +52,10 @@ function Table({ columns, data }) {
                     (row, i) => {
                         prepareRow(row);
                         return (
-                            <tr {...row.getRowProps()}>
+                            <tr {...row.getRowProps()} className="Comparison-row">
                                 {row.cells.map(cell => {
                                     return (
-                                        <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                        <td {...cell.getCellProps()} className="Comparison-row-cell">{cell.render('Cell')}</td>
                                     )
                                 })}
                             </tr>
@@ -81,7 +82,8 @@ export default function Comparison(props) {
 
             var newArr = [{Header: "File name", accessor: "name"}, ...arr]
             return newArr;
-        }
+        },
+        []
     );
 
     const data = React.useMemo(
@@ -100,7 +102,8 @@ export default function Comparison(props) {
 
                 return obj;
             })
-        }
+        },
+        []
     );
 
     // console.log(props.results);
@@ -113,63 +116,6 @@ export default function Comparison(props) {
             <div>Hold "shift" while clicking column names to sort by multiple columns.</div>
             <Table columns={columns} data={data} />
         </>
-    )
-
-    const {
-        getTableProps,
-        getTableBodyProps,
-        headerGroups,
-        rows,
-        prepareRow,
-    } = useTable({ columns, data })
-
-    console.log("rows" + rows);
-
-    return (
-        <table {...getTableProps()} style={{ border: 'solid 1px blue' }}>
-            <thead>
-            {headerGroups.map(headerGroup => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                    {headerGroup.headers.map(column => (
-                        <th
-                            {...column.getHeaderProps()}
-                            style={{
-                                borderBottom: 'solid 3px red',
-                                background: 'aliceblue',
-                                color: 'black',
-                                fontWeight: 'bold',
-                            }}
-                        >
-                            {column.render('Header')}
-                        </th>
-                    ))}
-                </tr>
-            ))}
-            </thead>
-            <tbody {...getTableBodyProps()}>
-            {rows.map(row => {
-                prepareRow(row)
-                return (
-                    <tr {...row.getRowProps()}>
-                        {row.cells.map(cell => {
-                            return (
-                                <td
-                                    {...cell.getCellProps()}
-                                    style={{
-                                        padding: '10px',
-                                        border: 'solid 1px gray',
-                                        background: 'papayawhip',
-                                    }}
-                                >
-                                    {cell.render('Cell')}
-                                </td>
-                            )
-                        })}
-                    </tr>
-                )
-            })}
-            </tbody>
-        </table>
     )
 
 }
