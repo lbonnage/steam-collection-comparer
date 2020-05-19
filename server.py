@@ -23,6 +23,14 @@ def compare():
 	post_data = request.get_json()
 	collection_ids = post_data["collections"]
 
+	if len(collection_ids) < 2:
+		print("[compare] Failed to compare collections.  Returning error message: " + "You must enter at least 2 collections to compare.")
+		response_object = {
+			'status': 'fail',
+			'message': "You must enter at least 2 collections to compare."
+		}
+		return jsonify(response_object), 400
+
 	print("[compare] Comparing collection IDs: " + str(collection_ids))
 	response_object = None
 	try:
