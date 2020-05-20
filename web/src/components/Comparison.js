@@ -75,7 +75,7 @@ export default function Comparison(props) {
         () => {
             var arr = props.collectionIds.map((id) => {
                 return {
-                    Header: <div> {props.results["file_information"][id]["title"]} <a href={"https://steamcommunity.com/sharedfiles/filedetails/?id=" + id}>(link)</a> </div>,
+                    Header: <div> {props.results["file_information"][id]["title"]} <a href={"https://steamcommunity.com/sharedfiles/filedetails/?id=" + id} target={"_blank"}>(link)</a> </div>,
                     accessor: id
                 }
             });
@@ -92,7 +92,7 @@ export default function Comparison(props) {
                 const key = file[0];
                 const value = file[1];
 
-                var obj = {name: <a href={"https://steamcommunity.com/sharedfiles/filedetails/?id=" + key}>{props.results["file_information"][key]["title"]}</a>};
+                var obj = {name: <a href={"https://steamcommunity.com/sharedfiles/filedetails/?id=" + key} target={"_blank"}>{props.results["file_information"][key]["title"]}</a>};
 
                 for (var i = 0; i < props.collectionIds.length; i++) {
                     var id = props.collectionIds[i];

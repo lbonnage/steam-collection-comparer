@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71890333-e856-4323-aa99-a610d69e7c43" name="Default" comment="Adding build correctly this time">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.1634b7ae.chunk.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.bd713c0dec1678c4d0746b20b603e83b.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/precache-manifest.4c47dbcb399d002587662bb791023149.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.e18933a4.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/js/main.1634b7ae.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.e18933a4.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Comparison.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Comparison.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Comparison.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="77" column="173" selection-start-line="77" selection-start-column="173" selection-end-line="77" selection-end-column="173" />
+            <state relative-caret-position="272">
+              <caret line="94" column="124" selection-start-line="94" selection-start-column="124" selection-end-line="94" selection-end-column="124" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -166,7 +172,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start">
     <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Steam Collection Compare" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,7 +235,7 @@
       <workItem from="1589921072142" duration="128000" />
       <workItem from="1589921255947" duration="601000" />
       <workItem from="1589934178165" duration="927000" />
-      <workItem from="1589939841616" duration="176000" />
+      <workItem from="1589939841616" duration="677000" />
     </task>
     <task id="LOCAL-00001" summary="Adding build correctly this time">
       <created>1589780430948</created>
@@ -242,7 +248,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21175000" />
+    <option name="totallyTimeSpent" value="21676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -382,8 +388,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Comparison.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="77" column="173" selection-start-line="77" selection-start-column="173" selection-end-line="77" selection-end-column="173" />
+        <state relative-caret-position="272">
+          <caret line="94" column="124" selection-start-line="94" selection-start-column="124" selection-end-line="94" selection-end-column="124" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
