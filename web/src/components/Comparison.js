@@ -75,7 +75,7 @@ export default function Comparison(props) {
         () => {
             var arr = props.collectionIds.map((id) => {
                 return {
-                    Header: <a href={"https://steamcommunity.com/sharedfiles/filedetails/?id=" + id}>{props.results["file_information"][id]["title"]}</a>,
+                    Header: <div> {props.results["file_information"][id]["title"]} <a href={"https://steamcommunity.com/sharedfiles/filedetails/?id=" + id}>(link)</a> </div>,
                     accessor: id
                 }
             });
