@@ -87,7 +87,14 @@ def create_file_information(file_details):
 
 	for file in file_details:
 		id = int(file["publishedfileid"])
-		title = file["title"]
+
+		title = None
+		try:
+			title = file["title"]
+		except Exception as e:
+			print("Failed retrieving title from file details:\n    File: " + str(file) + "\n    Exception: " + str(e))
+			title = "ERROR"
+
 		# description = file["description"]
 		info = {
 			"title": title,

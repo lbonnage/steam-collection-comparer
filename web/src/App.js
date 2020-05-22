@@ -25,7 +25,16 @@ function App() {
             body: JSON.stringify({ "collections": collections })
         };
         fetch('/compare', requestOptions)
-            .then(response => response.json())
+            .then(response => {
+
+                // Attempt to parse JSON from the object
+                try {
+                    return response.json();
+                } catch (e) {
+                    console.log("Failed parsing response from server; response is not valid JSON.  Likely experienced an error in the server.");
+                }
+
+            })
             .then(data => setResults(data))
             .then(data => setCollectionIds(collections))
             .then(data => setDisplayResults(true));
