@@ -74,6 +74,29 @@ def get_collection_files(collection_ids):
 	collection_files_json = json.loads(collection_files.decode("utf-8"))
 	collection_files_json = collection_files_json["response"]["collectiondetails"]
 
+
+	for i in range(len(collection_files_json)):
+
+		actual_files_json = collection_files_json[i]["children"]
+		subcollections =  []
+		subcollectionids = []
+
+		# Now iterate over to determine if any of the collectin's files are collections.  For ease of use, we will then delve in and retrieve the files from these collections to create a masterlist, rather than include the subcollections.
+		for file in actual_files_json:
+			if file["filetype"] == 2:
+				subcollections.append(file)
+				subcollectionids.append(file["publishedfileid"])
+
+		if len(subcollections) > 0:
+			sub_actual_files_json = get_collection_files(subcollectionids)
+			for subcollection in sub_actual_files_json:
+				actual_files_json += subcollection["children"]
+
+			for f in subcollections:
+				actual_files_json.remove(f)
+
+			collection_files_json[i]["children"] = actual_files_json
+
 	return collection_files_json
 
 
